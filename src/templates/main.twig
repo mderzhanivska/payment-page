@@ -1,0 +1,80 @@
+<div class="wrap">
+	<div class="form">
+		<form class="card-number js-card-number" action="https://ecq.test.upc.ua/go/pay" method="POST">
+			<div class="form-wrap">
+
+				{% if PAGE_TYPE == 'main' or PAGE_TYPE == 'info' %}
+					<div class="left">
+						{% include 'cards/cards.twig' %}
+					</div>
+				{% endif %}
+
+                {% if PAGE_TYPE == 'success' %}
+					<div class="right-add">
+                        {% include 'info/info.twig' %}
+					</div>
+                {% elseif PAGE_TYPE == 'error' %}
+					<div class="right-add">
+                        {% include 'info/info.twig' %}
+					</div>
+                {% else %}
+					<div class="right">
+                        {% include 'info/info.twig' %}
+					</div>
+                {% endif %}
+
+
+			</div>
+
+			<div class="form-wrap">
+				<div class="note">
+
+
+                    {% if PAGE_TYPE == 'success' %}
+
+                    {% elseif PAGE_TYPE == 'error' %}
+
+                    {% else %}
+						<div class="note-title">{{ dict.note[LANG] }}:</div>
+						<div class="note-desc with-opacity">{{ dict.noteDesc[LANG] }}</div>
+                    {% endif %}
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="buttons">
+					{% if PAGE_TYPE == 'success' %}
+						<a class="proceed-btn" href="#">{{ dict.store[LANG] }}</a>
+					{% elseif PAGE_TYPE == 'error' %}
+						<a class="proceed-btn" href="#">{{ dict.retry[LANG] }}</a>
+					{% else %}
+						<button class="proceed-btn" type="submit" id="submitBtn">{{ dict.payCards[LANG] }}</button>
+					{% endif %}
+				</div>
+
+				<div class="links">
+					<div class="links-list">
+						<div class="links-item">
+							<a href="https://www.mastercard.ru/ru-ru/consumer/features-benefits/securecode.html">
+								<img src="{{ PATH }}img/mastercard.png" alt="mastercard">
+							</a>
+						</div>
+
+						<div class="links-item">
+							<a href="https://www.visaeurope.com/making-payments/verified-by-visa/">
+								<img src="{{ PATH }}img/visa.png" alt="mastercard">
+							</a>
+						</div>
+
+						<div class="links-item">
+							<a href="https://www.visa.com.ua/uk_UA/pay-with-visa/visa-checkout.html">
+								<img src="{{ PATH }}img/VISA_Checkout_Logo-Icon.png" alt="visa checkout">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

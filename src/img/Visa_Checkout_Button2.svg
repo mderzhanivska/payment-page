@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77px" height="49px" viewBox="0 0 77 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>rect3570</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="17.1345206%" y1="-27.0176585%" x2="78.0036237%" y2="109.825171%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#C7C8CA" offset="20%"></stop>
+            <stop stop-color="#DDDEE0" offset="40.000001%"></stop>
+            <stop stop-color="#F6F5FB" offset="60.000002%"></stop>
+            <stop stop-color="#FFFFFF" offset="80.000001%"></stop>
+            <stop stop-color="#FDFCFA" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-17" transform="translate(-225.000000, -411.000000)" fill-rule="nonzero">
+            <g id="rect3570" transform="translate(225.000000, 411.000000)">
+                <path d="M4.65012887,0.37804878 L71.4929124,0.37804878 C74.0270579,0.37804878 76.0715206,2.41463805 76.0715206,4.93902439 L76.0715206,43.8170732 C76.0715206,46.3414595 74.0270579,48.3780488 71.4929124,48.3780488 L4.65012887,48.3780488 C2.1159833,48.3780488 0.0715206186,46.3414595 0.0715206186,43.8170732 L0.0715206186,4.93902439 C0.0715206186,2.41463805 2.1159833,0.37804878 4.65012887,0.37804878 Z" fill="url(#linearGradient-1)"></path>
+                <polygon id="rect3570-path" fill="#292E70" points="26 11 36.9078608 11 49.6887887 24 36.7976804 36.9146341 26.0244845 36.9146341 38.744201 23.9634146"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

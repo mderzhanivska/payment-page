@@ -1,0 +1,24 @@
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="../css/main.css"><title>Форма оплаты</title></head><body data-info="true" class="info-page"><header><div class="container"><div class="wrap"><div class="wrap-part"><div class="number"><a href="tel:0800307010">0-800-30-70-10</a></div></div><div class="wrap-part"><div class="lang-switcher"><ul class="lang-list"><li class="lang-item active"><a href="#">ru</a></li><li class="lang-item"><a href="/en/info">en</a></li><li class="lang-item"><a href="/ua/info">ua</a></li></ul></div><div class="logo"><a href="https://bankvostok.com.ua/"></a></div></div></div></div></header><div class="main"><form class="card-number js-card-number" action="https://ecq.test.upc.ua/go/pay" method="POST"><div class="form-wrap"><div class="form-wrap--left"><input type="hidden" name="action" value="process"><div class="form-header"><h4 class="title">Способ оплаты</h4></div><div class="form-body"><div class="cards"><div class="card-field front"><div class="card-wrap"><div class="field"><div class="field-title">Номер карты</div><div class="input-real">5168 **** **** 3201</div></div><div class="date"><div class="field-title">Срок действия</div><div class="date-field"><div class="date-real">08/2025</div><div class="visa-img"><img src="../img/icon_visa.png" alt=""></div><div class="message js-date-message"><span class="description"></span> <span class="close">x</span></div></div></div></div></div><div class="card-field back"><div class="line"></div><div class="card-wrap"><div class="card-verification"><div class="cvv-details"><div class="name">CVV2/CVC2</div><a href="#" class="link"><span class="tooltip">Card Verification Value 2 / Card Verification Code 2 - последние 3 цифры на обратной стороне карты</span> что это?</a></div><div class="message js-cvv-message"><span class="description"></span> <span class="close">x</span></div><div class="cvv-input"><input type="password" id="cvv" name="Cvc" maxlength="3" readonly="readonly" inputmode="numeric" autocomplete="Cvc"><div class="keyboard" id="keyboard"><a class="close">x</a><div class="keys"></div><div class="controls"><button type="button" class="change">Сменить</button> <button type="button" class="clear">←</button></div><div class="done-btn-cvv"><button type="button" class="done">Готово</button></div></div></div></div></div></div></div></div></div><div class="form-wrap--right"><div class="info"><div class="info-header"><h4 class="title">Данные платежа</h4></div><div class="details"><ul class="details-list"><li class="details-item"><div class="item-title">ID заказа</div><div class="item-value">1328</div></li><li class="details-item"><div class="item-title">Торговец</div><div class="item-value"><a href="http://www.bank.vostok.ua">http://www.bank.vostok.ua</a></div></li><li class="details-item"><div class="item-title">Описание</div><div class="item-value">Оплата картой</div></li><li class="details-item"><div class="item-title">Сумма</div><div class="item-value">50.00 UAH</div></li></ul></div></div></div></div><div class="form-wrap"><div class="note"><div class="note-title">Примечание:</div><div class="note-desc with-opacity">На следующей странице, возможно, будет произведена проверка карточки со стороны Вашего банка</div></div></div><div class="footer"><div class="buttons"><button class="proceed-btn" type="submit" id="submitBtn">Оплатить</button></div><div class="links"><div class="links-list"><div class="links-item"><a href="https://www.mastercard.ru/ru-ru/consumer/features-benefits/securecode.html"><img src="../img/mastercard.png" alt="mastercard"></a></div><div class="links-item"><a href="https://www.visaeurope.com/making-payments/verified-by-visa/"><img src="../img/visa.png" alt="visa"></a></div><div class="links-item"><a href="https://www.visa.com.ua/uk_UA/pay-with-visa/visa-checkout.html"><img src="../img/VISA_Checkout_Logo-Icon.png" alt="visa checkout"></a></div></div></div></div></form><script type="text/javascript">function onVisaCheckoutReady(){
+    V.init( {
+      apikey: "BD4MUORZGAWA7FQBJX0K21RpNif_UxvcR49mNu_Cf2LRktNBM",
+      paymentRequest:{
+        currencyCode: "USD",
+        subtotal: "11.00"
+      }
+    });
+    V.on("payment.success", function(payment)
+    {
+
+      console.log(JSON.stringify(payment));
+    });
+    V.on("payment.cancel", function(payment)
+    {
+
+      console.log(JSON.stringify(payment));
+    });
+    V.on("payment.error", function(payment, error)
+    {
+      console.log(JSON.stringify(error));
+    });
+  }</script><script type="text/javascript" src="https://sandbox-assets.secure.checkout.visa.com/
+checkout-widget/resources/js/integration/v1/sdk.js"></script></div><script src="../scripts/bundle.js"></script></body></html>

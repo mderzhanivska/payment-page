@@ -1,0 +1,24 @@
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="../css/main.css"><title>Форма оплаты</title></head><body class="error-page"><header><div class="container"><div class="wrap"><div class="wrap-part"><div class="number"><a href="tel:0800307010">0-800-30-70-10</a></div></div><div class="wrap-part"><div class="lang-switcher"><ul class="lang-list"><li class="lang-item active"><a href="#">ru</a></li><li class="lang-item"><a href="/en/error">en</a></li><li class="lang-item"><a href="/ua/error">ua</a></li></ul></div><div class="logo"><a href="https://bankvostok.com.ua/"></a></div></div></div></div></header><div class="main"><form class="card-number js-card-number" action="https://ecq.test.upc.ua/go/pay" method="POST"><div class="form-wrap"><div class="form-wrap--right-s"><div class="info"><div class="msg-title">Ошибка оплаты</div><div class="msg-desc">Превышен лимит</div><div class="details"><ul class="details-list"><li class="details-item"><div class="item-title">ID заказа</div><div class="item-value">1328</div></li><li class="details-item"><div class="item-title">Торговец</div><div class="item-value"><a href="http://www.bank.vostok.ua">http://www.bank.vostok.ua</a></div></li><li class="details-item"><div class="item-title">Описание</div><div class="item-value">Оплата картой</div></li><li class="details-item"><div class="item-title">Сумма</div><div class="item-value">50.00 UAH</div></li><li class="details-item"><div class="item-title">Код транзакции</div><div class="item-value with-opacity">-</div></li><li class="details-item"><div class="item-title">Код авторизации</div><div class="item-value with-opacity">-</div></li><li class="details-item"><div class="item-title">Время</div><div class="item-value with-opacity">-</div></li></ul></div></div></div></div><div class="form-wrap"></div><div class="footer"><div class="buttons"><a class="proceed-btn" href="#">Повторить</a></div><div class="links"><div class="links-list"><div class="links-item"><a href="https://www.mastercard.ru/ru-ru/consumer/features-benefits/securecode.html"><img src="../img/mastercard.png" alt="mastercard"></a></div><div class="links-item"><a href="https://www.visaeurope.com/making-payments/verified-by-visa/"><img src="../img/visa.png" alt="visa"></a></div><div class="links-item"><a href="https://www.visa.com.ua/uk_UA/pay-with-visa/visa-checkout.html"><img src="../img/VISA_Checkout_Logo-Icon.png" alt="visa checkout"></a></div></div></div></div></form><script type="text/javascript">function onVisaCheckoutReady(){
+    V.init( {
+      apikey: "BD4MUORZGAWA7FQBJX0K21RpNif_UxvcR49mNu_Cf2LRktNBM",
+      paymentRequest:{
+        currencyCode: "USD",
+        subtotal: "11.00"
+      }
+    });
+    V.on("payment.success", function(payment)
+    {
+
+      console.log(JSON.stringify(payment));
+    });
+    V.on("payment.cancel", function(payment)
+    {
+
+      console.log(JSON.stringify(payment));
+    });
+    V.on("payment.error", function(payment, error)
+    {
+      console.log(JSON.stringify(error));
+    });
+  }</script><script type="text/javascript" src="https://sandbox-assets.secure.checkout.visa.com/
+checkout-widget/resources/js/integration/v1/sdk.js"></script></div></body></html>

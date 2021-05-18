@@ -1,0 +1,108 @@
+
+<form class="card-number js-card-number" action="https://ecq.test.upc.ua/go/pay" method="POST">
+	<div class="form-wrap">
+
+					<div class="form-wrap--right-s">
+				
+
+
+
+
+
+
+<div class="info">
+
+	
+
+	<div class="info-header">
+		<h4 class="title"></h4>
+	</div>
+
+
+	<div class="details">
+		<ul class="details-list">
+
+			
+			
+			
+			
+		</ul>
+	</div>
+</div>
+			</div>
+
+		
+
+	</div>
+
+	<div class="form-wrap">
+		
+		
+
+	</div>
+
+	
+
+<div class="footer">
+	
+<div class="buttons">
+			<button class="proceed-btn" type="submit" id="submitBtn"></button>
+	</div>
+
+	<div class="links">
+		<div class="links-list">
+
+								<div class="links-item">
+		<a href="https://www.mastercard.ru/ru-ru/consumer/features-benefits/securecode.html">
+			<img src="img/mastercard.png" alt="mastercard">
+		</a>
+	</div>
+
+								<div class="links-item">
+		<a href="https://www.visaeurope.com/making-payments/verified-by-visa/">
+			<img src="img/visa.png" alt="visa">
+		</a>
+	</div>
+
+								<div class="links-item">
+		<a href="https://www.visa.com.ua/uk_UA/pay-with-visa/visa-checkout.html">
+			<img src="img/VISA_Checkout_Logo-Icon.png" alt="visa checkout">
+		</a>
+	</div>
+
+			
+		</div>
+	</div>
+</div>
+</form>
+
+<script type="text/javascript">
+  function onVisaCheckoutReady(){
+    V.init( {
+      apikey: "BD4MUORZGAWA7FQBJX0K21RpNif_UxvcR49mNu_Cf2LRktNBM",
+      paymentRequest:{
+        currencyCode: "USD",
+        subtotal: "11.00"
+      }
+    });
+    V.on("payment.success", function(payment)
+    {
+
+      console.log(JSON.stringify(payment));
+    });
+    V.on("payment.cancel", function(payment)
+    {
+
+      console.log(JSON.stringify(payment));
+    });
+    V.on("payment.error", function(payment, error)
+    {
+      console.log(JSON.stringify(error));
+    });
+  }
+</script>
+
+<script type="text/javascript"
+        src="https://sandbox-assets.secure.checkout.visa.com/
+checkout-widget/resources/js/integration/v1/sdk.js">
+</script>

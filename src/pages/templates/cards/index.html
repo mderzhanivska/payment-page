@@ -1,0 +1,151 @@
+<input type="hidden" name="action" value="process"/>
+
+<div class="form-header">
+	<h4 class="title"></h4>
+</div>
+
+
+	<div class="visa_btn">
+		<a href="#">
+			<img alt="Visa Checkout" class="v-button" role="button"
+			     src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png"/>
+		</a>
+	</div>
+
+<div class="form-body">
+	<div class="cards">
+		<div class="card-field front">
+			<div class="card-wrap">
+				
+<div class="field">
+	<div class="field-title"></div>
+
+	
+		<div class="input-field">
+			<input
+					type="text"
+					class="card-number"
+					name="CardNumber"
+					id="cardNumber"
+					inputmode="numeric"
+					autocomplete="CardNumber"
+			/>
+
+			<div class="card-types js-card-type">
+				<span></span>
+			</div>
+
+				<div class="message js-caption-message">
+		<span class="description"></span>
+		<span class="close">x</span>
+	</div>
+
+		</div>
+	
+</div>
+				
+<div class="date">
+	<div class="field-title"></div>
+
+	<div class="date-field">
+					<div class="month select">
+				<select name="ExpMonth" id="ExpMonth" autocomplete="ExpMonth">
+					<option selected hidden value=""></option>
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
+			</div>
+
+			<div class="year select">
+				<select name="ExpYear" id="ExpYear" autocomplete="off">
+					<option selected hidden label=" "></option>
+											<option value="2018">2018</option>
+											<option value="2019">2019</option>
+											<option value="2020">2020</option>
+											<option value="2021">2021</option>
+											<option value="2022">2022</option>
+											<option value="2023">2023</option>
+											<option value="2024">2024</option>
+											<option value="2025">2025</option>
+											<option value="2026">2026</option>
+											<option value="2027">2027</option>
+											<option value="2028">2028</option>
+									</select>
+			</div>
+		
+			<div class="message js-date-message">
+		<span class="description"></span>
+		<span class="close">x</span>
+	</div>
+
+	</div>
+</div>
+			</div>
+		</div>
+
+		<div class="card-field back">
+			<div class="line"></div>
+
+			<div class="card-wrap">
+				
+<div class="card-verification">
+	<div class="cvv-details">
+		<div class="name">CVV2/CVC2</div>
+		<a href="#" class="link">
+			<span class="tooltip"></span>
+			
+		</a>
+	</div>
+
+		<div class="message js-cvv-message">
+		<span class="description"></span>
+		<span class="close">x</span>
+	</div>
+
+
+	<div class="cvv-input">
+		<input
+				type="password"
+				id="cvv"
+				name="Cvc"
+				maxlength="3"
+				readonly
+				inputmode="numeric"
+				autocomplete="Cvc"
+		>
+
+		<div class="keyboard" id="keyboard">
+			<a class="close">x</a>
+			<div class="keys"></div>
+
+			<div class="controls">
+				<button
+						type="button"
+						class="change"
+				></button>
+
+				<button type="button" class="clear">←</button>
+			</div>
+
+			<div class="done-btn-cvv">
+				<button type="button" class="done">
+					
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>

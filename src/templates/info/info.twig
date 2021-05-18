@@ -1,0 +1,113 @@
+
+<div class="info">
+
+	{% if PAGE_TYPE == 'success' %}
+		<div class="msg-title msg-title-success">{{ dict.success[LANG] }}</div>
+	{% elseif PAGE_TYPE == 'error' %}
+		<div class="msg-title">{{ dict.error[LANG] }}</div>
+		<div class="msg-desc">{{ dict.errorDesc[LANG] }}</div>
+	{% else %}
+		<div class="info-header">
+			<h4 class="title">{{ dict.paymentDetails[LANG] }}</h4>
+		</div>
+	{% endif %}
+
+
+
+
+            {% if PAGE_TYPE == 'success' %}
+	<div class="details">
+		<ul class="details-list">
+				<li class="details-item">
+					<div class="item-title">{{ dict.orderID[LANG] }}</div>
+					<div class="item-value">1328</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.merchant[LANG] }}</div>
+					<div class="item-value"><a
+								href="http://www.bank.vostok.ua">http://www.bank.vostok.ua</a>
+					</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.description[LANG] }}</div>
+					<div class="item-value">Оплата картой</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.amount[LANG] }}</div>
+					<div class="item-value">50.00 UAH</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.transactionCode[LANG] }}</div>
+					<div class="item-value with-opacity">1328</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.authTime[LANG] }}</div>
+					<div class="item-value with-opacity">4375927</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.time[LANG] }}</div>
+					<div class="item-value with-opacity">18:50 01/01/2018</div>
+				</li>
+		</ul>
+	</div>
+            {% elseif PAGE_TYPE == 'error' %}
+	<div class="details">
+		<ul class="details-list">
+				<li class="details-item">
+					<div class="item-title">{{ dict.orderID[LANG] }}</div>
+					<div class="item-value">1328</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.merchant[LANG] }}</div>
+					<div class="item-value"><a
+								href="http://www.bank.vostok.ua">http://www.bank.vostok.ua</a>
+					</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.description[LANG] }}</div>
+					<div class="item-value">Оплата картой</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.amount[LANG] }}</div>
+					<div class="item-value">50.00 UAH</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.transactionCode[LANG] }}</div>
+					<div class="item-value with-opacity">-</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.authTime[LANG] }}</div>
+					<div class="item-value with-opacity">-</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.time[LANG] }}</div>
+					<div class="item-value with-opacity">-</div>
+				</li>
+		</ul>
+	</div>
+            {% else %}
+	<div class="details">
+		<ul class="details-list">
+				<li class="details-item">
+					<div class="item-title">{{ dict.orderID[LANG] }}</div>
+					<div class="item-value">1328</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.merchant[LANG] }}</div>
+					<div class="item-value"><a
+								href="http://www.bank.vostok.ua">http://www.bank.vostok.ua</a>
+					</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.description[LANG] }}</div>
+					<div class="item-value">Оплата картой</div>
+				</li>
+				<li class="details-item">
+					<div class="item-title">{{ dict.amount[LANG] }}</div>
+					<div class="item-value">50.00 UAH</div>
+				</li>
+		</ul>
+	</div>
+            {% endif %}
+
+</div>

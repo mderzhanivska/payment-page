@@ -1,0 +1,33 @@
+
+<div class="container">
+	<div class="wrap">
+		<div class="wrap-part">
+			<div class="number">
+				<a href="tel:0800307010">0-800-30-70-10</a>
+			</div>
+		</div>
+
+		<div class="wrap-part">
+			<div class="lang-switcher">
+				<ul class="lang-list">
+					{% for item in navigation %}
+						{% set href = item.path ~ NAVIGATION_SUFFIX|default('')|trim('/', 'left') %}
+
+						<li class="lang-item{% if item.title == LANG %} active{% endif %}">
+							<a href="{% if item.title == LANG %}#{% else %}{{ href }}{% endif %}">
+								{{ item.title }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<div class="logo">
+				<a href="https://bankvostok.com.ua/">
+					{#<img src="{{ PATH }}img/logo_vostok_new.png" alt="logo">#}
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+

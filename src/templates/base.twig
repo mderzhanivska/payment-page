@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang={{ LANG }}>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	{% block head %}
+		<link rel="stylesheet" href="{{ PATH }}css/main.css">
+		{% if styles %}
+			<link rel="stylesheet" href="{{ PATH }}css/{{ styles }}.css">
+		{% endif %}
+		<title>{{ dict.title[LANG] }}</title>
+	{% endblock %}
+</head>
+
+<body {% if PAGE_TYPE == 'info' %}data-info="true"{% endif %} class="{{ PAGE_TYPE }}-page">
+	<header>{% include 'header.twig' %}</header>
+
+	<div class="main">{% include 'main.twig' %}</div>
+
+	{% if PAGE_TYPE != 'success' and PAGE_TYPE != 'error' %}
+		<script src="{{ PATH }}scripts/bundle.js"></script>
+	{% endif %}
+</body>
+</html>

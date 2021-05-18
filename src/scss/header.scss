@@ -1,0 +1,106 @@
+@import "variables";
+
+header {
+  padding: 10px 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media #{$extraHD} {
+    padding-top: 40px;
+  }
+
+  .wrap {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media #{$tablet} {
+      padding-top: 20px;
+      flex-direction: column;
+    }
+
+    .wrap-part {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @media #{$tablet} {
+        padding: 0;
+        flex-direction: column;
+      }
+
+      .number {
+        a {
+          font-family: 'Graphik-Semibold';
+          font-size: 14px;
+          font-weight: 600;
+          color: $orange;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .lang-switcher {
+        margin-right: 60px;
+
+        @media #{$tablet} {
+          margin: 0;
+          padding-top: 10px;
+        }
+        .lang-list {
+          display: flex;
+          flex-direction: row;
+          padding-left: 0;
+
+          .lang-item {
+            margin: .7vw 0;
+            padding: 0 5px;
+            list-style-type: none;
+
+            &.active a {
+              color: $orange;
+              cursor: default;
+            }
+
+            a {
+              width: 100%;
+              font-size: 13px;
+              color: #999999;
+              transition: all ease-in-out .03s;
+              text-transform: uppercase;
+              text-decoration: none;
+
+              &:hover,
+              &:focus {
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+
+      .logo {
+        width: 149px;
+        height: 40px;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url('../img/logo_vostok_new.png');
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
